@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
 
 * {
   margin: 0px;
@@ -62,10 +62,6 @@ header {
   border-bottom: 2px solid;
 }
 
-.logBox a {
-  font-size: 16px;
-}
-
 ::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-size: 18px;
@@ -77,6 +73,16 @@ header {
   text-align: center;
   padding: 5px;
   cursor: pointer;
+  transition: all ease 0.1s;
+}
+
+.logInBox a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, .4);
 }
 
 footer {
@@ -102,6 +108,7 @@ footer ul li a {
   letter-spacing: 2px;
   font-weight: 600;
   padding: 10px;
+  cursor: pointer;
   transition: all ease 0.1s;
 }
 
