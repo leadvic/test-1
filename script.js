@@ -1,8 +1,8 @@
 function registrar() {
-    var email = document.getElementById('email').value;
-    var contrasena = document.getElementById('contrasena').value;
-    
-    firebase.auth().createUserWithEmailAndPassword(email, contrasena)
+    var regEmail = document.getElementById('regEmail').value;
+    var regPass = document.getElementById('regPass').value;
+
+    firebase.auth().createUserWithEmailAndPassword(regEmail, regPass)
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -11,11 +11,11 @@ function registrar() {
       });
 }
 function login(){
-    var email2 = document.getElementById('email2').value;
-    var contrasena2 = document.getElementById('contrasena2').value;
+    var logEmail = document.getElementById('logEmail').value;
+    var logPass = document.getElementById('logPass').value;
 
 
-    firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
+    firebase.auth().signInWithEmailAndPassword(logEmail, logPass)
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;

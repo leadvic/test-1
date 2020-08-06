@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Page Title</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/59aed36701.js" crossorigin="anonymous"></script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-
   <script>
-    // Your web app's Firebase configuration
     var firebaseConfig = {
       apiKey: "AIzaSyBQLalbKz4QoOHF0Oj919X-XUyKxO7Leh0",
       authDomain: "usuarios-c0cb4.firebaseapp.com",
@@ -22,15 +20,8 @@
       appId: "1:1022139587362:web:a6f8de6be3fb1f7e84237b",
       measurementId: "G-C70TJG336T"
     };
-    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
   </script>
-
-
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
 </head>
 
@@ -40,12 +31,12 @@
 
       <div class="logBox">
         <i class="fas fa-user-circle"></i>
-        <input id="email2" type="text" placeholder="UserName" name="" value="">
+        <input id="logEmail" type="text" placeholder="UserName" name="" value="">
       </div>
 
       <div class="logBox">
         <i class="fas fa-key"></i>
-        <input id="contrasena2" type="password" placeholder="Password" name="" value="">
+        <input id="logPass" type="password" placeholder="Password" name="" value="">
       </div>
 
       <input onclick="login()" class="button" type="button" name="" value="Log In">
@@ -62,4 +53,5 @@
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
