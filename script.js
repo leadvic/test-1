@@ -72,10 +72,11 @@ function observador(){
 }
 observador();
 
-function cerrar() {
+function cerrar() {  
   firebase.auth().signOut()
   .then(function() {
     console.log('Saliendo...');
+    location.href='index.html';
   })
   .catch(function(error){
     console.log(error);
