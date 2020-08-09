@@ -72,7 +72,7 @@ function observador(){
 }
 observador();
 
-function cerrar() {  
+function cerrar() {
   firebase.auth().signOut()
   .then(function() {
     console.log('Saliendo...');
@@ -93,4 +93,19 @@ user.sendEmailVerification().then(function() {
   // An error happened.}
   console.log(error);
 });
+}
+
+
+// Changin Background Images
+var images = ['https://i.pximg.net/img-original/img/2020/03/03/00/00/07/79855820_p0.jpg','https://picsum.photos/200/300/?random'];
+var index = 0;
+
+function buildImage() {
+    document.getElementById('content').style.backgroundImage = 'url('+images[index]+')';
+}
+
+function changeImage() {
+    index++;
+    if (index >= images.length) index = 0;
+        document.getElementById('content').style.backgroundImage = 'url(' + images[index] + ')';
 }
