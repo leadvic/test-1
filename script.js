@@ -81,7 +81,6 @@ function cerrar() {
   .catch(function(error){
     console.log(error);
   })
-
 }
 
 function verificar() {
