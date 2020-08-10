@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/59aed36701.js" crossorigin="anonymous"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>  7.17.1 -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 
   <script>
     var firebaseConfig = {
@@ -35,13 +35,13 @@
   <header>
     <div class="logInBox">
       <div class="logBox">
-        <input id="logEmail" type="text" placeholder="Info1" name="" value="">
+        <input id="nombre" type="text" placeholder="Nombre" name="" value="">
       </div>
       <div class="logBox">
-        <input id="logEmail" type="text" placeholder="Info2" name="" value="">
+        <input id="apellido" type="text" placeholder="Apellido" name="" value="">
       </div>
 
-      <a onclick="login()" class="button">Guardar</a>
+      <a id="boton" onclick="guardar()" class="button">Guardar</a>
     </div>
 
     <div class="separator">
@@ -53,20 +53,14 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Info1</th>
-            <th>Info2</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
             <th>Eliminar</th>
             <th>Editar</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th>1</th>
-            <td>Pedrito</td>
-            <td>Alcachofa</td>
-            <td><a onclick="" class="button">Eliminar</a></td>
-            <td><a onclick="" class="button">Editar</a></td>
-          </tr>
+        <tbody id="tabla">
+
         </tbody>
       </table>
     </div>
@@ -79,6 +73,7 @@
   </footer>
 
   <script src="javaScript/script.js"></script>
+  <script src="javaScript/baseDatos.js"></script>
 </body>
 
 </html>
