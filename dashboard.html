@@ -9,18 +9,19 @@
 
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-storage.js"></script>
 
   <script>
     var firebaseConfig = {
-    apiKey: "AIzaSyDRIMBhn--t15-3ZHrjDXussUSy5FbqvUQ",
-    authDomain: "mipc-82f6d.firebaseapp.com",
-    databaseURL: "https://mipc-82f6d.firebaseio.com",
-    projectId: "mipc-82f6d",
-    storageBucket: "mipc-82f6d.appspot.com",
-    messagingSenderId: "899225335434",
-    appId: "1:899225335434:web:ec2f1ff3f409b1c47d9f73",
-    measurementId: "G-L08R0ELNPG"
-  };
+      apiKey: "AIzaSyDRIMBhn--t15-3ZHrjDXussUSy5FbqvUQ",
+      authDomain: "mipc-82f6d.firebaseapp.com",
+      databaseURL: "https://mipc-82f6d.firebaseio.com",
+      projectId: "mipc-82f6d",
+      storageBucket: "mipc-82f6d.appspot.com",
+      messagingSenderId: "899225335434",
+      appId: "1:899225335434:web:ec2f1ff3f409b1c47d9f73",
+      measurementId: "G-L08R0ELNPG"
+    };
     firebase.initializeApp(firebaseConfig);
   </script>
 
@@ -36,12 +37,26 @@
       <li><a href="#">item1</a></li>
       <li><a href="#">item2</a></li>
       <li><a href="#">item3</a></li>
-      <li><a href="#">LogOut</a></li>
+      <li><a onclick="cerrar()">LogOut</a></li>
     </ul>
   </nav>
 
-  <main>
-    main
+  <main class="profile">
+    <div class="profileImage">
+      <img id="img" src="images/4.jpg">
+
+      <div class="upload button">
+        <a>Subir</a>
+        <input onchange="chooseFile(event)" type="file">
+      </div>
+
+      <a onclick="uploadFile()" class="button">Guardar</a>
+    </div>
+    <div class="profileInfo">
+      <input type="text" placeholder="Nombre">
+      <input type="text" placeholder="Edad">
+      <a class="button">Actualizar</a>
+    </div>
   </main>
 
   <aside>
@@ -64,7 +79,7 @@
     footer
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javaScript/script.js"></script>
 </body>
 
 </html>

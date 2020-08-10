@@ -9,8 +9,8 @@
 }
 
 :root{
-  --main-radius:5px;
-  --main-padding:5px;
+  --main-radius:10px;
+  --main-padding:10px;
   --main-background: rgba(0, 0, 0, .8);
 }
 
@@ -20,7 +20,7 @@ p,h1,h2{
 
 body {
   display: grid;
-  height: 100vh;
+  height: 100%;
   margin: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 2fr 1fr 0.5fr;
@@ -47,23 +47,24 @@ nav {
   border-radius: 10px;
 }
 
-.logo{
-  cursor: pointer;
-}
-
 .navegationBar{
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   grid-gap: 5px;
   align-items: center;
+  padding: var(--main-padding);
 }
 
 .navegationBar img{
   width: 40px;
 }
 
+.logo{
+  cursor: pointer;
+}
+
 .navegationBar li{
-  grid-auto-rows: 1px solid white;
+  list-style-type: none;
 }
 
 
@@ -76,7 +77,7 @@ nav {
 }
 
 .navegationBar li a:hover{
-  color: white;
+  color: orange;
 }
 
 /* Main Content */
@@ -87,6 +88,81 @@ main {
   padding-top: var(--main-padding);
   background: var(--main-background);
   border-radius: 10px;
+}
+
+.profile{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--main-padding);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+}
+
+.profile a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.profileImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.upload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.profileImage img{
+  max-width:60%;
+}
+
+.profileInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  padding: 8px 0px;
+  margin: 8px 0px;
+}
+
+.profileInfo input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0px 10px;
+  border-bottom: 2px solid;
+}
+
+.button{
+  margin-top: var(--main-padding);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 1);
 }
 
 /* Aside Content */
