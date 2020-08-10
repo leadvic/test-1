@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+}
+
+:root{
+  --main-radius:5px;
+  --main-padding:5px;
+  --main-background: rgba(0, 0, 0, .8);
+}
+
+p,h1,h2{
+  color: white;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  margin: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2fr 1fr 0.5fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main aside"
+    "c1 c2 c3 aside"
+    "footer footer footer footer";
+    grid-gap: 5px;
+    text-align: center;
+    background-image: url("../images/7.jpg"); /* Se recomienda usar 3 y 6 */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Navegation Bar */
+
+nav {
+  grid-area: nav;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.navegationBar{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-gap: 5px;
+  align-items: center;
+}
+
+.navegationBar img{
+  width: 40px;
+}
+
+.navegationBar li{
+  grid-auto-rows: 1px solid white;
+}
+
+
+.navegationBar li{
+  padding-right: 10px;
+}
+
+.navegationBar li a{
+  transition: all ease 0.2s;
+}
+
+.navegationBar li a:hover{
+  color: white;
+}
+
+/* Main Content */
+
+main {
+  grid-area: main;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* Aside Content */
+
+aside {
+  grid-area: aside;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* Extra Content 1 */
+
+.c1 {
+  grid-area: c1;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* Extra Content 2 */
+
+.c2 {
+  grid-area: c2;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* Extra Content 3 */
+
+.c3 {
+  grid-area: c3;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius:5px;);
+  padding-top: var(--main-padding);
+  background: var(--main-background);
+  border-radius: 10px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 550px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.4fr 2fr 1fr 1fr 1fr 0.4fr;
+    grid-template-areas:
+      "nav"
+      "aside"
+      "main"
+      "c1"
+      "c2"
+      "c3"
+      "footer";
+    background-image: url("../images/4.jpg");
+  }
+}

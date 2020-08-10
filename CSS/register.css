@@ -3,9 +3,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  color: black;
+  color: white;
   font-family: 'Lato', sans-serif;
   text-decoration: none;
+}
+
+:root{
+  --main-background: rgba(0, 0, 0, .6);
 }
 
 html {
@@ -14,8 +18,7 @@ html {
 
 body {
   height: 100%;
-  background-image: url("images/6.jpg");
-  /* Se recomienda usar 3 y 6 */
+  background-image: url("../images/6.jpg"); /* Se recomienda usar 3 y 6 */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -34,7 +37,7 @@ header {
   align-items: center;
   width: 280px;
   border-radius: 20px;
-  background: rgba(0, 0, 0, .3);
+  background: var(--main-background);
   padding: 20px;
 }
 
@@ -70,11 +73,11 @@ header {
 
 .button {
   width: 50%;
-  background: rgba(0, 0, 0, .2);
+  background: var(--main-background);
   text-align: center;
   padding: 5px;
   cursor: pointer;
-  transition: all ease 0.1s;
+  transition: all ease 0.2s;
 }
 
 .logInBox a {
@@ -83,12 +86,12 @@ header {
 }
 
 .button:hover {
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, 1);
 }
 
 footer {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: var(--main-background);
 }
 
 footer ul {
